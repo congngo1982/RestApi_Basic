@@ -14,4 +14,6 @@ import nguyencongngo.entity.Student;
 public interface IStudentDAO {
     public List<Student> getList();
     public Student getStudent(int id);
+    public boolean deleteStudent(int id);
+    public Student saveStudent(Student std);
 }

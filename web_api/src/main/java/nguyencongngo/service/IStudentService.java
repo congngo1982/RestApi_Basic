@@ -14,4 +14,6 @@ import nguyencongngo.entity.Student;
 public interface IStudentService {
     public List<Student> getList();
     public Student getStudent(int id);
+    public Student saveStudent(Student stu);
+    public boolean deleteStudent(int id);
 }

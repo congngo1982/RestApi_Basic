@@ -28,8 +28,21 @@ public class StudentService implements IStudentService {
     }
 
     @Override
+    @Transactional
     public Student getStudent(int id) {
         return dao.getStudent(id);
+    }
+
+    @Override
+    @Transactional
+    public Student saveStudent(Student stdnt) {
+        return dao.saveStudent(stdnt);
+    }
+
+    @Override
+    @Transactional
+    public boolean deleteStudent(int i) {
+        return dao.deleteStudent(i);
     }
 
 }

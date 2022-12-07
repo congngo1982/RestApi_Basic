@@ -13,8 +13,10 @@
     </head>
     <body>
         <h1>REST-API PAGE</h1>
-        <span>Get List Students: </span><a href="${pageContext.request.contextPath}/api/student">Get List Students</a> <br><br>
-        <span>Copy this URL then add id of Student at the End of URL (Default ID is 1): </span>
-        <a href="${pageContext.request.contextPath}/api/student/1">${pageContext.request.contextPath}/api/student/</a> <br><br>
+        <span>Get List Students: ${pageContext.request.contextPath}/api/student</span> <br><br>
+        <span>Get Student by Id - Method GET: ${pageContext.request.contextPath}/api/student/{Id of Student}</span> <br><br>
+        <span>Delete Student by Id - Method DELETE: ${pageContext.request.contextPath}/api/student/{Id of Student}</span><br><br>
+        <span>Add Student - Method POST: ${pageContext.request.contextPath}/api/student</span><br><br>
+        <span>UPDATE Student by Id - Method PUT: ${pageContext.request.contextPath}/api/student</span><br><br>
     </body>
 </html>

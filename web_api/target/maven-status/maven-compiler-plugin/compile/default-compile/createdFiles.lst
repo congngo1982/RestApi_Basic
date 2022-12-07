@@ -1,10 +1,10 @@
 nguyencongngo\controller\Controller.class
 nguyencongngo\entity\Student.class
+nguyencongngo\repository\StudentDAO.class
+nguyencongngo\config\AppInitializer.class
+nguyencongngo\service\IStudentService.class
 nguyencongngo\hibernate\MySessionFactory.class
 nguyencongngo\controller\AppRestController.class
-nguyencongngo\repository\StudentDAO.class
 nguyencongngo\config\AppConfig.class
-nguyencongngo\config\AppInitializer.class
 nguyencongngo\repository\IStudentDAO.class
-nguyencongngo\service\IStudentService.class
 nguyencongngo\service\StudentService.class

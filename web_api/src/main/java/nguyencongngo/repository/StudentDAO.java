@@ -61,4 +61,41 @@ public class StudentDAO implements IStudentDAO {
         return stu;
     }
 
+    @Override
+    public boolean deleteStudent(int id) {
+        boolean result = false;
+        Session session = null;
+        Student stu = null;
+        session = sessionFactory.openSession();
+        try {
+            session.getTransaction().begin();
+            Student std = session.get(Student.class, id);
+            System.out.println("Student: " + std);
+            session.delete(std);
+            result = true;
+            System.out.println("Result: " + result);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+        } finally {
+            session.close();
+        }
+        return result;
+    }
+
+    @Override
+    public Student saveStudent(Student stdnt) {
+        Session session = null;
+        Student stu = null;
+        session = sessionFactory.openSession();
+        try {
+            session.getTransaction().begin();
+            stu = stdnt;
+            session.save(stu);
+        } catch (Exception e) {
+        } finally {
+            session.close();
+        }
+        return stu;
+    }
+
 }
